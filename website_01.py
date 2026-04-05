@@ -222,7 +222,7 @@ def wo_men():
     st.divider()
     st.header("植物")
 def yi_liao_jie_dai():
-    st.write("由于0038其特殊书写带有一定模因污染导致0022间歇性文盲。博士称此模因污染会使人抱怨“这字太tm草了”")
+    st.write("由于0038其特殊书写带有一定模因污染，导致0022间歇性文盲。█████博士称此模因污染会使人抱怨“这字太tm草了”")
     st.divider()
     st.header("一些猎奇设施")
     st.divider()
