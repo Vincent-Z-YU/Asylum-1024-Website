@@ -1,5 +1,6 @@
 import streamlit as st
-import base64
+import webbrowser
+import os
 
 # --------------------------
 # 页面设置
@@ -113,7 +114,7 @@ def wo_men():
     st.divider()
     st.header("植物")
 
-def yi_liao_jie_dai():
+def yi_liao_jie_dai(pdf_name):
     st.write("由于0038其特殊书写带有一定模因污染，导致0022间歇性文盲。█████博士称此模因污染会使人抱怨“这字太tm草了”")
     st.divider()
     st.header("一些猎奇设施")
@@ -123,25 +124,23 @@ def yi_liao_jie_dai():
 def geng_duo():
     st.write("不知道放哪的文档先塞这")
 
-def show_pdf(file_path):
-    with open(file_path,"rb") as f:
-        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-    pdf_display = f'''
-    <iframe 
-        src="data:application/pdf;base64,{base64_pdf}" 
-        width="100%" 
-        height="900px" 
-        type="application/pdf">
-    </iframe>
-    '''
-    st.markdown(pdf_display, unsafe_allow_html=True)
+def show_pdf(pdf_name):
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(BASE_DIR, pdf_name)
+
+    if os.path.exists(file_path):
+        # 把文件路径转为本地url，直接用浏览器打开
+        webbrowser.open("file://" + file_path)
+        st.success("✅ 已在新浏览器标签页打开PDF")
+    else:
+        st.error("❌ 文件不存在，请检查路径")
 
 def V():
     st.info("鼓浪屿旅行手账")
     show_pdf("鼓浪屿旅行手账.pdf")
     st.divider()
     st.info("历史博物馆——经典文物介绍：跪射俑")
-    show_pdf("历史博物馆——经典文物介绍：跪射俑")
+    show_pdf("历史博物馆——经典文物介绍：跪射俑.pdf")
 
 
 
