@@ -9,7 +9,7 @@ st.set_page_config(
     page_title="Asylum12 Website",
     page_icon="👁️",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 
 # 读取网址参数
@@ -136,11 +136,13 @@ def show_pdf(pdf_name):
         st.error("❌ 文件不存在，请检查路径")
 
 def V():
-    st.info("鼓浪屿旅行手账")
-    show_pdf("鼓浪屿旅行手账.pdf")
+    st.info("语文：鼓浪屿旅行手账")
+    if st.button("open",key="pdf1"):
+        show_pdf("鼓浪屿旅行手账.pdf")
     st.divider()
-    st.info("历史博物馆——经典文物介绍：跪射俑")
-    show_pdf("历史博物馆——经典文物介绍：跪射俑.pdf")
+    st.info("历史：历史博物馆——经典文物介绍：跪射俑")
+    if st.button("open",key="pdf2"):
+        show_pdf("历史博物馆——经典文物介绍：跪射俑.pdf")
 
 
 
