@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as pd
+import base64
 
 # --------------------------
 # 页面设置
@@ -90,6 +90,7 @@ def main_page():
     st.text("这里的内容目前不属于 Asylum12 的官方内容")
     st.text("这个网站被0022塞了很多奇怪的东西，忽视即可")
     st.text("注：这个网站在建设期间常被0022用作一些个人文件的临时存放处:P")
+    st.divider()
     st.title("院长你要的大标题")
     st.divider()
     st.image("https://p4.itc.cn/q_70/images03/20220914/2cb80041290d446c8e1e9b33f6dfefa3.jpeg", caption="还有院长你要的大照片")
@@ -120,6 +121,28 @@ def yi_liao_jie_dai():
 
 def geng_duo():
     st.write("不知道放哪的文档先塞这")
+
+def show_pdf(file_path):
+    with open(file_path,"rb") as f:
+        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+    pdf_display = f'''
+    <iframe 
+        src="data:application/pdf;base64,{base64_pdf}" 
+        width="100%" 
+        height="900px" 
+        type="application/pdf">
+    </iframe>
+    '''
+    st.markdown(pdf_display, unsafe_allow_html=True)
+
+def V():
+    st.info("鼓浪屿旅行手账")
+    show_pdf("鼓浪屿旅行手账.pdf")
+    st.divider()
+    st.info("历史博物馆——经典文物介绍：跪射俑")
+    show_pdf("历史博物馆——经典文物介绍：跪射俑")
+
+
 
 # --------------------------
 # 页面路由
