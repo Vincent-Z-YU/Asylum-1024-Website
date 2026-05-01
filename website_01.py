@@ -124,7 +124,7 @@ def yi_liao_jie_dai(pdf_name):
 def geng_duo():
     st.write("不知道放哪的文档先塞这")
 
-def show_pdf(pdf_name):
+def download_pdf(pdf_name):
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(BASE_DIR, pdf_name)
 
@@ -143,12 +143,10 @@ def show_pdf(pdf_name):
 
 def V():
     st.info("语文：鼓浪屿旅行手账")
-    if st.button("open",key="pdf1"):
-        show_pdf("鼓浪屿旅行手账.pdf")
+    download_pdf("鼓浪屿旅行手账.pdf")
     st.divider()
     st.info("历史：历史博物馆——经典文物介绍：跪射俑")
-    if st.button("open",key="pdf2"):
-        show_pdf("历史博物馆——经典文物介绍：跪射俑.pdf")
+    download_pdf("历史博物馆——经典文物介绍：跪射俑.pdf")
 
 
 
