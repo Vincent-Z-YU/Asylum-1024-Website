@@ -129,9 +129,15 @@ def show_pdf(pdf_name):
     file_path = os.path.join(BASE_DIR, pdf_name)
 
     if os.path.exists(file_path):
-        # 把文件路径转为本地url，直接用浏览器打开
-        webbrowser.open("file://" + file_path)
-        st.success("✅ 已在新浏览器标签页打开PDF")
+        with open(file_path, "rb") as f:
+            pdf_bytes = f.read()
+        # 给用户一个下载按钮，点击就会下载PDF，本地直接打开
+        st.download_button(
+            label="下载PDF查看",
+            data=pdf_bytes,
+            file_name=pdf_name,
+            mime="application/pdf"
+        )
     else:
         st.error("❌ 文件不存在，请检查路径")
 
