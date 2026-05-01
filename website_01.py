@@ -25,7 +25,8 @@ with st.sidebar:
         "我们": "us",
         "医疗＆接待": "medical",
         "更多": "more",
-        "streamlit可用功能展示": "demo"
+        "streamlit可用功能展示": "demo",
+        "0022杂物柜":"V"
     }
 
     try:
@@ -160,3 +161,5 @@ if __name__ == '__main__':
         yi_liao_jie_dai()
     elif page == "more":
         geng_duo()
+    elif page == "V":
+        V()
