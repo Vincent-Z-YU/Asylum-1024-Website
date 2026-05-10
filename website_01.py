@@ -147,6 +147,8 @@ def V():
     st.divider()
     st.info("历史：历史博物馆——经典文物介绍：跪射俑")
     download_pdf("历史博物馆——经典文物介绍：跪射俑.pdf")
+    st.info("地理：台湾是我国领土不可分割的一部分")
+    download_pdf("台湾是我国领土不可分割的一部分.pdf")
 
 
 
