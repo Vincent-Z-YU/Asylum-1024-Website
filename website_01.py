@@ -9,7 +9,6 @@ st.set_page_config(
     page_title="Asylum12 Website",
     page_icon="👁️",
     layout="wide",
-    initial_sidebar_state="collapsed"
 )
 
 # 读取网址参数
@@ -21,13 +20,13 @@ with st.sidebar:
     st.title("Navigation")
 
     menu_dict = {
-        "0022杂物柜":"V",
         "首页": "home",
         "结构": "structure",
         "我们": "us",
         "医疗＆接待": "medical",
         "更多": "more",
-        "streamlit可用功能展示": "demo"
+        "streamlit可用功能展示": "demo",
+        "0022杂物柜":"V"
     }
 
     try:
