@@ -13,7 +13,7 @@ st.set_page_config(
 
 # 读取网址参数
 query = st.query_params
-page = query.get("page", "home")
+page = query.get("page", "V")
 
 # 侧边栏
 with st.sidebar:
