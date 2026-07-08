@@ -1,5 +1,4 @@
 import streamlit as st
-import webbrowser
 import os
 
 # --------------------------
@@ -9,6 +8,7 @@ st.set_page_config(
     page_title="Asylum12 Website",
     page_icon="👁️",
     layout="wide",
+    initial_sidebar_state="collapsed"
 )
 
 # 读取网址参数
