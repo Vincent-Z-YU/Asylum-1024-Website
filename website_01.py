@@ -92,7 +92,7 @@ def main_page():
     st.text("这个网站被0022塞了很多奇怪的东西，忽视即可")
     st.text("注：这个网站在建设期间常被0022用作一些个人文件的临时存放处:P")
     st.divider()
-    st.md("## Welcome to the 12th Asylum!")
+    st.markdown("## Welcome to the 12th Asylum!")
     st.text("We are delighted to see you here,dear patient,as we have been waiting for you for a long time.You may relax,for this is a safe haven for our kind.There is no need to worry about your little ‘condition’ anymore.Our medical team has specially tailored an exclusive rehabilitation program just for you. Please be assured that we will put our best efforts into improving your physical and mental health.No forms or payment is required beforehand —we have taken care of those unimportant issues.")
     st.text("")
     st.text("The only thing asked of you,my dear,is to follow a few simple rules.Please remember that this is a private institution,using the most cutting edge treatments.Some of these methods are special to this place, so kindly do not mention them to anyone outside the 12th asylum.Don’t be afraid.None of the said treatments are dangerous,as long as you take them without struggle.We have some of the best therapists and psychologists working on cases such as yourself.Do not disobey us,or we will be forced to readjust your scheduled treatments.Most importantly,the main building has and only has 17 floors.If you see any patients from the 18th floor,report to a doctor immediately.All of them wear badges inscribed with serial numbers starting with 00.Never go to any floors above your assigned level.The patients living above you are rather more unstable.Socializing with them may worsen your own condition.")
