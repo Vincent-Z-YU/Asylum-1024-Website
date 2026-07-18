@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 # 读取网址参数
-page = st.query_params.get("page", "vincent_file")
+page = st.query_params.get("page", "vincent-file")
 
 # 侧边栏
 with st.sidebar:
@@ -22,10 +22,10 @@ with st.sidebar:
         "首页": "home",
         "结构": "structure",
         "我们": "us",
-        "医疗＆接待": "medical",
+        "医疗＆接待": "medical-and-reception",
         "更多": "more",
         "streamlit可用功能展示": "demo",
-        "0022杂物柜": "vincent_file"
+        "0022杂物柜": "vincent-file"
     }
 
     try:
@@ -169,9 +169,9 @@ def us():
     st.header("植物")
 
 # todo The routing call does not pass parameters to this function, so the "pdf_name" parameter is removed to be improved.
-# def medical_reception(pdf_name):
+# def yi_liao_jie_dai(pdf_name):
 
-def medical_reception():
+def medical_and_reception():
     st.write("由于0038其特殊书写带有一定模因污染，导致0022间歇性文盲。█████博士称此模因污染会使人抱怨“这字太tm草了”")
     st.divider()
     st.header("一些猎奇设施")
@@ -231,9 +231,9 @@ if __name__ == '__main__':
         structure()
     elif page == "us":
         us()
-    elif page == "medical":
-        medical_reception()
+    elif page == "medical-and-reception":
+        medical_and_reception()
     elif page == "more":
         more()
-    elif page == "vincent_file":
+    elif page == "vincent-file":
         vincent_file()
