@@ -81,10 +81,26 @@ def show():
     - 表格、图表、表单
     - 多列并排布局
     """)
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.success("演示")
-        st.write("文字")
+    columns1, columns2, columns3 = st.columns(3)
+
+    # columns1: status messages (success, info)
+    with columns1:
+        st.success("成功")
+        st.write("这是第一列的内容")
+        st.info("提示信息")
+
+    # columns2: metric card (temperature with delta)
+    with columns2:
+        st.warning("警告")
+        st.write("这是第二列的内容")
+        st.metric("温度", "22°C", "1.2°C")
+
+    # columns3: interactive button
+    with columns3:
+        st.error("错误")
+        st.write("这是第三列的内容")
+        st.button("点击按钮")
+
 
 def main_page():
     st.title("Asylum12 Website(Under construction)")
