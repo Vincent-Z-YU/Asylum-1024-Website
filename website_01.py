@@ -214,6 +214,7 @@ def vincent_file():
     download_pdf("第一单元：坚持宪法至上.pdf")
     st.info("道法：第二单元思维导图")
     download_pdf("第二单元：理解权利义务.pdf")
+    st.divider()
 
 
 # --------------------------
