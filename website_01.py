@@ -207,16 +207,13 @@ def load_pdf_bytes(file_path):
 
 
 def vincent_file():
-    st.info("语文：鼓浪屿旅行手账")
-    download_pdf("鼓浪屿旅行手账.pdf")
+    # st.info("")
+    # download_pdf(".pdf")
     st.divider()
-    st.info("历史：历史博物馆——经典文物介绍：跪射俑")
-    download_pdf("历史博物馆——经典文物介绍：跪射俑.pdf")
-    st.divider()
-    st.info("地理：台湾是我国领土不可分割的一部分")
-    download_pdf("台湾是我国领土不可分割的一部分.pdf")
-    st.info("道法：社区环保行动探究")
-    download_pdf("社区环保行动探究.pdf")
+    st.info("道法：第一单元思维导图")
+    download_pdf("第一单元：坚持宪法至上.pdf")
+    st.info("道法：第二单元思维导图")
+    download_pdf("第二单元：理解权利义务.pdf")
 
 
 # --------------------------
